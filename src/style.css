@@ -94,13 +94,13 @@ header.scrolled {
 
 /* Hero Section */
 .hero {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 0 5%;
+  padding: 100px 5% 40px; /* Included top padding to prevent header overlap */
   position: relative;
 }
 
@@ -322,25 +322,47 @@ header.scrolled {
 @media (max-width: 900px) {
   .walkthrough-container {
     flex-direction: column-reverse; /* Put mockup above text */
+    gap: 0;
   }
   
+  .walkthrough-text {
+    padding: 0;
+  }
+
   .walkthrough-graphic {
     position: sticky;
-    top: 80px; /* Below navbar */
-    height: auto;
-    width: 100%;
-    margin-bottom: 2rem;
+    top: 65px; /* Just below the navbar */
+    height: auto; 
+    width: 100vw;
+    margin-left: -5vw;
+    margin-right: -5vw;
     z-index: 10;
+    margin-bottom: 2rem;
+    
+    /* Solid background prevents text from overlapping transparent areas */
+    background: #040914;
+    border-bottom: 1px solid var(--glass-border);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    
+    padding: 3vh 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .mockup-frame {
-    width: 60%; /* smaller on mobile */
-    max-width: 250px;
+    height: 40vh; /* Bulletproof absolute height relative to viewport */
+    width: auto;
+    aspect-ratio: 9 / 19.5;
     margin: 0 auto;
+    flex-shrink: 0; /* Prevent flex box collapse */
   }
   
   .text-panel {
-    min-height: 50vh; /* Shorter scroll height on mobile */
+    min-height: 50vh; /* Allow smooth individual scrolling */
+    justify-content: center;
+    padding-top: 5vh; 
+    padding-bottom: 5vh;
   }
   
   .text-panel h2 {
