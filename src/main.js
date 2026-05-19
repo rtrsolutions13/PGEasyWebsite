@@ -13,6 +13,7 @@ document.querySelector('#app').innerHTML = `
   </header>
 
   <main>
+    <!-- ... (hero section) ... -->
     <section class="hero">
       <div class="tag fade-in-up delay-1">Coming Soon</div>
       <h1 class="fade-in-up delay-2">Hostel Management,<br><span>Revolutionized.</span></h1>
@@ -71,7 +72,7 @@ document.querySelector('#app').innerHTML = `
         <div class="footer-section">
           <h4>Company</h4>
           <ul>
-            <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="/privacy">Privacy Policy</a></li>
           </ul>
         </div>
         <div class="footer-section">
@@ -170,3 +171,5 @@ setTimeout(() => {
     observer.observe(el)
   })
 }, 100)
+
+
