@@ -65,6 +65,24 @@ document.querySelector('#app').innerHTML = `
 
       </div>
     </section>
+
+    <footer id="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact</h4>
+          <p>privacy@easypg.com</p>
+        </div>
+        <div class="footer-section">
+          <p class="copyright">&copy; 2026 EasyPG. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
   </main>
 `
 
